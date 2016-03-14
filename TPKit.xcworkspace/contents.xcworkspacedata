@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:Category"
+      name = "Category">
+      <FileRef
+         location = "group:NSString+UUID.h">
+      </FileRef>
+      <FileRef
+         location = "group:NSString+UUID.m">
+      </FileRef>
+      <FileRef
+         location = "group:UIColor+TPColor.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIColor+TPColor.m">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
+</Workspace>

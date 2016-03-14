@@ -1,0 +1,9 @@
+
+
+
+
+# 忽略文件
+*.xccheckout
+.DS_Store
+DerivedData
+
