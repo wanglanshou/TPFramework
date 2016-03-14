@@ -8,7 +8,7 @@
 
 #import "TPMenuItemsView.h"
 
-#import <Masonry.h>
+#import "Masonry.h"
 
 @interface TPMenuItemsView()
 @property (nonatomic, strong) NSMutableArray *menuItems;
