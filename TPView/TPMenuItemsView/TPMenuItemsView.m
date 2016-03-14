@@ -127,9 +127,8 @@
  */
 - (void) showMoreOperationsWithImages:(NSArray *)images atIndex:(NSInteger)index{
     
+    [self unExpand];
     if (self.selectedIndex == index) {
-        //unexpand
-        [self unExpand];
         return;
     }
     self.selectedIndex = index;
