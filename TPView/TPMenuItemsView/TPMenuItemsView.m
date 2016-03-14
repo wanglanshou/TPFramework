@@ -132,7 +132,7 @@
         [self unExpand];
         return;
     }
-    
+    self.selectedIndex = index;
     UIButton *menuItem = self.menuItems[index];
     for (int i=0; i< images.count; i++) {
         UIImage *operationImage = images[i];
@@ -187,7 +187,6 @@
  *  如果已经展开，则收起功能栏
  */
 - (void) unExpand{
-    UIButton *operationBtn = [self.operationItems firstObject];
     [self.operationItems makeObjectsPerformSelector:@selector(removeFromSuperview)];
     [self.operationItems removeAllObjects];
     self.selectedIndex = -1;

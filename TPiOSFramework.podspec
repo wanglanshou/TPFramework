@@ -4,7 +4,7 @@
 Pod::Spec.new do |s|
 
 	s.name		= "TPiOSFramework"
-	s.version	= "1.1.8"
+	s.version	= "1.1.9"
 	s.summary	= "tupo framework"
 	s.homepage 	= "https://github.com/wanglanshou"
 	s.license	= "mit"
