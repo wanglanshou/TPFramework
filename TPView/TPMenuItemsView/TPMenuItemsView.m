@@ -88,6 +88,7 @@
                     UIImage *image = [self.dataSource tpMenuItemsView:self imageForCellIndex:i];
                     [menuItem setImage:image forState:UIControlStateNormal];
                 }
+                [menuItem setNeedsLayout];
             }
         }else{
             NSAssert(1, @"%@ didn't implement datasouce : - (NSInteger) tpMenuItemRows:(TPMenuItemsView *)menuItemsView ; ",self);
