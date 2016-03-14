@@ -76,4 +76,9 @@ typedef NS_ENUM(NSInteger, TPMenuItemsViewType) {
  */
 - (void) showMoreOperationsWithImages:(NSArray *)images atIndex:(NSInteger)index;
 
+/**
+ *  如果已经展开，则收起功能栏
+ */
+- (void) unExpand;
+
 @end

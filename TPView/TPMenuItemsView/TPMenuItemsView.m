@@ -13,7 +13,7 @@
 @interface TPMenuItemsView()
 @property (nonatomic, strong) NSMutableArray *menuItems;
 @property (nonatomic, strong) NSMutableArray *operationItems;
-
+@property (nonatomic, assign) NSInteger selectedIndex;
 @end
 
 @implementation TPMenuItemsView
@@ -27,6 +27,7 @@
         self.itemSize = CGSizeMake(44, 44);
         self.seperateLength = 20;
         self.styleType = TPMenuItemsViewTypeLeft;//默认是在左边
+        self.selectedIndex = -1;
     }
     return self;
 }
@@ -125,16 +126,13 @@
  *  @param index  <#index description#>
  */
 - (void) showMoreOperationsWithImages:(NSArray *)images atIndex:(NSInteger)index{
-    if (self.operationItems.count > 0) {
-        
-        UIButton *operationBtn = [self.operationItems firstObject];
-        [self.operationItems makeObjectsPerformSelector:@selector(removeFromSuperview)];
-        [self.operationItems removeAllObjects];
-        if (operationBtn.tag / 1000  == index) {
-            //表示当前已经展开这个工具栏
-            return;
-        }
+    
+    if (self.selectedIndex == index) {
+        //unexpand
+        [self unExpand];
+        return;
     }
+    
     UIButton *menuItem = self.menuItems[index];
     for (int i=0; i< images.count; i++) {
         UIImage *operationImage = images[i];
@@ -184,6 +182,17 @@
     [self.operationItems removeAllObjects];
     return nil;
 }
+
+/**
+ *  如果已经展开，则收起功能栏
+ */
+- (void) unExpand{
+    UIButton *operationBtn = [self.operationItems firstObject];
+    [self.operationItems makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [self.operationItems removeAllObjects];
+    self.selectedIndex = -1;
+}
+
 
 
 /*
