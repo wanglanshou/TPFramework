@@ -4,7 +4,7 @@
 Pod::Spec.new do |s|
 
 	s.name		= "TPiOSFramework"
-	s.version	= "1.1.2"
+	s.version	= "1.1.3"
 	s.summary	= "tupo framework"
 	s.homepage 	= "https://github.com/wanglanshou"
 	s.license	= "mit"
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
 	s.platform	= :ios,"8.0"
 	s.ios.deployment_target = "8.0"
 	s.source	= {:git => "https://github.com/wanglanshou/TPFramework.git" ,:tag => s.version}
-	s.source_files = "Category/*.{h,m}"
+	s.source_files = "Category/*.{h,m}","TPView/TPMemuItemsView/*.{h,m}"
 	s.requires_arc = true
 	s.dependency "Masonry"
 end
