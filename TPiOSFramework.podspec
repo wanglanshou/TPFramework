@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 	s.source	= {:git => "https://github.com/wanglanshou/TPFramework.git" ,:tag => s.version}
 	s.source_files = "TPFrequentlyDemo/Category/*.{h,m}"
 	s.subspec "TPMenuItemsView" do |s1|
-		s1.source_files = "/TPFrequentlyDemo/TPView/**/*.{h,m}"
+		s1.source_files = "TPFrequentlyDemo/TPView/**/*.{h,m}"
 		end
 	s.requires_arc = true
 	s.dependency "Masonry","~>0.6.4"
