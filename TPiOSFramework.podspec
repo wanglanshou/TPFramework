@@ -4,7 +4,7 @@
 Pod::Spec.new do |s|
 
 	s.name		= "TPiOSFramework"
-	s.version	= "1.2.3"
+	s.version	= "1.2.4"
 	s.summary	= "tupo framework"
 	s.homepage 	= "https://github.com/wanglanshou"
 	s.license	= "mit"
@@ -17,9 +17,8 @@ Pod::Spec.new do |s|
 		s1.source_files = "TPFrequentlyDemo/TPView/**/*.{h,m}"
 		end
 	s.subspec "TPAudio" do |audio|
-		audio.souce_files = "TPFrequentlyDemo/TPAudio/*.{h,m}"
-		audio.ios.vendored_framework = "TPFrequently/TPAudio/*.framework"
-		audio.ios.vendored_libraries = "TPFrequently/TPAudio/*.a"
+		audio.source_files = "TPFrequentlyDemo/TPAudio/*.{h,m}"
+		audio.ios.vendored_framework = "TPFrequentlyDemo/TPAudio/lame.framework"
 		end
 
 	s.requires_arc = true

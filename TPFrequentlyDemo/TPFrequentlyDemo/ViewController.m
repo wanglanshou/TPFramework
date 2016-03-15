@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "TPAudio.h"
 @interface ViewController ()
 
 @end
@@ -19,7 +19,21 @@ TPSINGLETON_IMP(ViewController)
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [ViewController sharedInstance];
+    NSError *error;
+    [[TPAudio sharedInstance] startRecordMp3WithProgress:^(NSInteger recordSeconds) {
+        NSLog(@"pre %ld",recordSeconds);
+    } error:&error];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSError *error1;
+        [[TPAudio sharedInstance] stopRecordMp3WithCompletion:^(NSString *fullPath, NSInteger duration, NSError *error) {
+            NSLog(@"dur %ld  path: %@", duration, fullPath);
+        } error:&error1];
+        NSLog(@"error %@",error);
+        
+        
+    });
+
 }
 
 - (void)didReceiveMemoryWarning {

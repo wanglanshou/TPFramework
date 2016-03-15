@@ -147,7 +147,6 @@
     BOOL isSuc = FALSE;
     @try {
         int read, write;
-        NSData *data = [NSData dataWithContentsOfFile:pcmFilePath];
         FILE *pcm = fopen([pcmFilePath cStringUsingEncoding:1], "rb");  //source 被转换的音频文件位置
         if(!pcm){
             return;
@@ -189,10 +188,6 @@
         NSLog(@"%@",[exception description]);
     }
     @finally {
-//        
-//        NSLog(@"MP3生成成功:%@",mp3Path);
-//        NSFileManager *fileManager = [NSFileManager defaultManager];
-//        [fileManager removeItemAtPath:pcmFilePath error:nil];
 
         if (!self.finishBlock) {
             return;

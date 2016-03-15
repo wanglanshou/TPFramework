@@ -18,9 +18,8 @@
 		214C7CEC1C97BB9F00D864DA /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 214C7CE61C97BB9F00D864DA /* NSString+UUID.m */; };
 		214C7CED1C97BB9F00D864DA /* UIColor+TPColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 214C7CE91C97BB9F00D864DA /* UIColor+TPColor.m */; };
 		214C7CEE1C97BB9F00D864DA /* UIImage+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 214C7CEB1C97BB9F00D864DA /* UIImage+TPCategory.m */; };
-		214C7CFB1C97DF4100D864DA /* lame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214C7CF71C97DF4100D864DA /* lame.framework */; };
-		214C7CFC1C97DF4100D864DA /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 214C7CF81C97DF4100D864DA /* libmp3lame.a */; };
 		214C7CFD1C97DF4100D864DA /* TPAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 214C7CFA1C97DF4100D864DA /* TPAudio.m */; };
+		214C7D441C97EA5300D864DA /* lame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214C7D431C97EA5300D864DA /* lame.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,10 +63,9 @@
 		214C7CE91C97BB9F00D864DA /* UIColor+TPColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TPColor.m"; sourceTree = "<group>"; };
 		214C7CEA1C97BB9F00D864DA /* UIImage+TPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TPCategory.h"; sourceTree = "<group>"; };
 		214C7CEB1C97BB9F00D864DA /* UIImage+TPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TPCategory.m"; sourceTree = "<group>"; };
-		214C7CF71C97DF4100D864DA /* lame.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = lame.framework; sourceTree = "<group>"; };
-		214C7CF81C97DF4100D864DA /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
 		214C7CF91C97DF4100D864DA /* TPAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPAudio.h; sourceTree = "<group>"; };
 		214C7CFA1C97DF4100D864DA /* TPAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPAudio.m; sourceTree = "<group>"; };
+		214C7D431C97EA5300D864DA /* lame.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = lame.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				214C7CFB1C97DF4100D864DA /* lame.framework in Frameworks */,
-				214C7CFC1C97DF4100D864DA /* libmp3lame.a in Frameworks */,
+				214C7D441C97EA5300D864DA /* lame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,8 +191,7 @@
 		214C7CF61C97DF4100D864DA /* TPAudio */ = {
 			isa = PBXGroup;
 			children = (
-				214C7CF71C97DF4100D864DA /* lame.framework */,
-				214C7CF81C97DF4100D864DA /* libmp3lame.a */,
+				214C7D431C97EA5300D864DA /* lame.framework */,
 				214C7CF91C97DF4100D864DA /* TPAudio.h */,
 				214C7CFA1C97DF4100D864DA /* TPAudio.m */,
 			);
