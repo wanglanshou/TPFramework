@@ -65,5 +65,15 @@
 }
 
 
++ (UIImage *)tpGetPartOfImage:(UIImage *)img rect:(CGRect)partRect
+{
+    CGImageRef imageRef = img.CGImage;
+    CGImageRef imagePartRef = CGImageCreateWithImageInRect(imageRef, partRect);
+    UIImage *retImg = [UIImage imageWithCGImage:imagePartRef];
+    CGImageRelease(imagePartRef);
+    return retImg;
+}
+
+
 
 @end

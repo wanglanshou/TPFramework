@@ -26,5 +26,6 @@
 
 - (UIImage *) tpImageWithGradientTintColor:(UIColor *)tintColor;
 
++ (UIImage *)tpGetPartOfImage:(UIImage *)img rect:(CGRect)partRect;
 
 @end
