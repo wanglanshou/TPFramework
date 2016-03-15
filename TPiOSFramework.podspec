@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
 	s.platform	= :ios,"8.0"
 	s.ios.deployment_target = "8.0"
 	s.source	= {:git => "https://github.com/wanglanshou/TPFramework.git" ,:tag => s.version}
-	s.source_files = "Category/*.{h,m}"
+	s.source_files = "TPFrequentlyDemo/Category/*.{h,m}"
 	s.subspec "TPMenuItemsView" do |s1|
 		s1.source_files = "TPView/**/*.{h,m}"
 		end
