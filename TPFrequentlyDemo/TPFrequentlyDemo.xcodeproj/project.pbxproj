@@ -20,6 +20,7 @@
 		214C7CEE1C97BB9F00D864DA /* UIImage+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 214C7CEB1C97BB9F00D864DA /* UIImage+TPCategory.m */; };
 		214C7CFD1C97DF4100D864DA /* TPAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 214C7CFA1C97DF4100D864DA /* TPAudio.m */; };
 		214C7D441C97EA5300D864DA /* lame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214C7D431C97EA5300D864DA /* lame.framework */; };
+		214C7D471C97EF1800D864DA /* UIView+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 214C7D461C97EF1800D864DA /* UIView+TPCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		214C7CF91C97DF4100D864DA /* TPAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPAudio.h; sourceTree = "<group>"; };
 		214C7CFA1C97DF4100D864DA /* TPAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPAudio.m; sourceTree = "<group>"; };
 		214C7D431C97EA5300D864DA /* lame.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = lame.framework; sourceTree = "<group>"; };
+		214C7D451C97EF1800D864DA /* UIView+TPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TPCategory.h"; sourceTree = "<group>"; };
+		214C7D461C97EF1800D864DA /* UIView+TPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TPCategory.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +172,8 @@
 				214C7CE91C97BB9F00D864DA /* UIColor+TPColor.m */,
 				214C7CEA1C97BB9F00D864DA /* UIImage+TPCategory.h */,
 				214C7CEB1C97BB9F00D864DA /* UIImage+TPCategory.m */,
+				214C7D451C97EF1800D864DA /* UIView+TPCategory.h */,
+				214C7D461C97EF1800D864DA /* UIView+TPCategory.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -332,6 +337,7 @@
 				214C7CEE1C97BB9F00D864DA /* UIImage+TPCategory.m in Sources */,
 				214C7CFD1C97DF4100D864DA /* TPAudio.m in Sources */,
 				214C7CED1C97BB9F00D864DA /* UIColor+TPColor.m in Sources */,
+				214C7D471C97EF1800D864DA /* UIView+TPCategory.m in Sources */,
 				214C7CB91C97BB4E00D864DA /* ViewController.m in Sources */,
 				214C7CB61C97BB4E00D864DA /* AppDelegate.m in Sources */,
 				214C7CB31C97BB4E00D864DA /* main.m in Sources */,

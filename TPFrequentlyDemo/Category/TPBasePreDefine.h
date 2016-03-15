@@ -12,7 +12,7 @@
 #import "NSString+UUID.h"
 #import "UIColor+TPColor.h"
 #import "UIImage+TPCategory.h"
-
+#import "UIView+TPCategory.h"
 
 
 //常用宏定义
