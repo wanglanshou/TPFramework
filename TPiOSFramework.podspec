@@ -20,6 +20,9 @@ Pod::Spec.new do |s|
 		audio.source_files = "TPFrequentlyDemo/TPAudio/*.{h,m}"
 		audio.ios.vendored_framework = "TPFrequentlyDemo/TPAudio/lame.framework"
 		end
+	s.subspec "TPSuperBoard" do |superboard|
+		superboard.source_files = "TPFrequentlyDemo/TPView/SuperBoard/**/*.{h,m}"
+		superboard.ios.vendored_framework = "TPFrequentlyDemo/TPView/SuperBoard/TPWhiteBoard.bundle"
 
 	s.requires_arc = true
 	s.dependency "Masonry","~>0.6.4"
