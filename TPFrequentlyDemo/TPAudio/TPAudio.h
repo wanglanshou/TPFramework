@@ -32,6 +32,11 @@ typedef void (^TPAudioFinishBlock)(NSString *fullPath, NSInteger duration,NSErro
  */
 - (void) stopRecordMp3WithCompletion:(TPAudioFinishBlock)completion error:(NSError **)error;
 
+#pragma mark - 播放
+- (void)startPlayMp3WithMp3File:(NSString *)mp3File error:(NSError **)error;
+
+- (void) stopPlayMp3;
+
 
 
 @end

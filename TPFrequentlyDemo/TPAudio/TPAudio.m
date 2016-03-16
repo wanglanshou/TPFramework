@@ -19,6 +19,7 @@
 @property (nonatomic, copy) TPAudioRecordProgressBlock progressBlock;
 @property (nonatomic, copy) TPAudioFinishBlock finishBlock;
 
+@property (nonatomic, strong) AVAudioPlayer *audioPlayer;
 
 @end
 
@@ -220,6 +221,26 @@
     CFRelease(uuidString);
     return result;
 }
+
+
+#pragma mark - 播放
+- (void)startPlayMp3WithMp3File:(NSString *)mp3File error:(NSError **)error{
+    
+    if (self.audioPlayer) {
+        [self.audioPlayer stop];
+        self.audioPlayer = nil;
+    }
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:mp3File] error:error];
+    [self.audioPlayer play];
+}
+
+- (void) stopPlayMp3{
+    if (self.audioPlayer) {
+        [self.audioPlayer stop];
+        self.audioPlayer = nil;
+    }
+}
+
 
 
 @end

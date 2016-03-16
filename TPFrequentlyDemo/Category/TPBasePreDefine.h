@@ -14,11 +14,13 @@
 #import "UIImage+TPCategory.h"
 #import "UIView+TPCategory.h"
 
-
-
+#ifndef TPScreenDefine
+#define TPScreenDefine
 #define TPScreenWidth [UIScreen mainScreen].bounds.size.width
 #define TPScreenHeight [UIScreen mainScreen].bounds.size.height
 #define TPScreenBounds [UIScreen mainScreen].bounds;
+
+#endif
 
 
 //常用宏定义
