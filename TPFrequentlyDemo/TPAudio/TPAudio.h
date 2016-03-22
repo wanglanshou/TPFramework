@@ -10,12 +10,11 @@
 
 typedef void (^TPAudioRecordProgressBlock)(NSInteger recordSeconds);
 typedef void (^TPAudioFinishBlock)(NSString *fullPath, NSInteger duration,NSError *error);
-
-
-
+typedef void (^ TPAudioPlayFinishBlock) (void);
 @interface TPAudio : NSObject
 
 + (instancetype)sharedInstance;
+@property (nonatomic, copy) TPAudioPlayFinishBlock audioPlayBlock;
 
 /**
  *  开始录音
@@ -34,6 +33,7 @@ typedef void (^TPAudioFinishBlock)(NSString *fullPath, NSInteger duration,NSErro
 
 #pragma mark - 播放
 - (void)startPlayMp3WithMp3File:(NSString *)mp3File error:(NSError **)error;
+
 
 - (void) stopPlayMp3;
 

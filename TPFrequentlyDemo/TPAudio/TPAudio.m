@@ -11,7 +11,7 @@
 #import <lame/lame.h>
 #define TPAudioSAMPLE_RATE 11025.0
 
-@interface TPAudio()<AVAudioRecorderDelegate>
+@interface TPAudio()<AVAudioRecorderDelegate,AVAudioPlayerDelegate>
 
 @property (nonatomic, strong) AVAudioRecorder *audioRecorder;
 @property (nonatomic, strong) NSTimer *progressTimer;
@@ -231,8 +231,15 @@
         self.audioPlayer = nil;
     }
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:mp3File] error:error];
+    self.audioPlayer.delegate = self;
     [self.audioPlayer play];
 }
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
+    if (flag && self.audioPlayBlock) {
+        self.audioPlayBlock();
+    }
+}
+
 
 - (void) stopPlayMp3{
     if (self.audioPlayer) {
